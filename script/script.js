@@ -1,9 +1,12 @@
 console.log("BOM Lab ");
 
-// let body=window.alert("Hello there,ARE You REAdy The GAMe is about to begin")
+let body = window.alert(
+  "Hello there, are you ready ? The game is about begin....!!!"
+);
+window.alert("if you miss more than 4,the game will be over");
 let area = document.getElementById("app");
 let display = document.getElementById("display");
-area.append("You tried! ");
+area.append("Your result! ");
 
 function playGame(num1, num2) {
   return num1 * num2;
@@ -18,6 +21,7 @@ let count = 0;
 let gameDuration = 0;
 console.log(answer);
 let answerGot = 0;
+
 while (trial) {
   randomNum1 = Math.floor(Math.random() * 10) + 1;
   randomNum2 = Math.floor(Math.random() * 10) + 1;
@@ -47,19 +51,18 @@ while (trial) {
     trial = false;
   }
 }
-area.append(
-  ` you got ${answerGot} of 10 and missed ${
-    10 - answerGot
-  } of 10 : you killed it `
-);
 if (answerGot < 5) {
   area.style.backgroundColor = "red";
+  area.append(`you got ${answerGot} of 10 : you lost sorry ..`);
   // window.backgroundColor="red"
 } else if (answerGot < 7) {
   area.style.backgroundColor = "yellow";
+  area.append(`you got ${answerGot} of 10 : not bad ..`);
 } else if (answerGot <= 9) {
   area.style.backgroundColor = "blue";
+  area.append(`you got ${answerGot} of 10 : That excelence`);
 } else {
   area.style.backgroundColor = "green";
+  area.append(`you got ${answerGot} of 10 : WoW Congrats ,you killed it!!!`);
 }
-display.append("answer");
+display.append(`thank you for playing:`);
