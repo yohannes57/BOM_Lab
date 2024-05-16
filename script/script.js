@@ -1,7 +1,7 @@
 console.log("BOM Lab ");
 
 let body = window.alert(
-  "Hello there, are you ready ? The game is about begin....!!!"
+  "Hello there, are you ready ? The game is about to begin....!!!"
 );
 window.alert("if you miss more than 4,the game will be over");
 let area = document.getElementById("app");
@@ -22,9 +22,14 @@ let gameDuration = 0;
 console.log(answer);
 let answerGot = 0;
 
+// setTimeout(() => {
+
+// }, timeout);
+
 while (trial) {
   randomNum1 = Math.floor(Math.random() * 10) + 1;
   randomNum2 = Math.floor(Math.random() * 10) + 1;
+
   answer = window.prompt(
     `Guess the Number:  ${randomNum1} times ${randomNum2}`
   );
